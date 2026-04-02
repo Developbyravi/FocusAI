@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+import config from '../config';
 
 const Dashboard = () => {
   const [stats, setStats] = useState(null);
@@ -12,7 +13,7 @@ const Dashboard = () => {
 
   const fetchDashboardData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/analytics/dashboard');
+      const response = await axios.get(`${config.apiUrl}/analytics/dashboard`);
       setStats(response.data);
     } catch (error) {
       console.error('Failed to fetch dashboard data:', error);

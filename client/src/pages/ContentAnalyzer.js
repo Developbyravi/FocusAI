@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+import config from '../config';
 
 const ContentAnalyzer = () => {
   const [url, setUrl] = useState('');
@@ -17,7 +18,7 @@ const ContentAnalyzer = () => {
     setResult(null);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/analyze', {
+      const response = await axios.post(`${config.apiUrl}/analyze`, {
         url: type === 'url' ? url : undefined,
         content: type === 'text' ? content : undefined,
         type

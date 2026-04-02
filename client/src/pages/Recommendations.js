@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
+import config from '../config';
 
 const Recommendations = () => {
   const [recommendations, setRecommendations] = useState([]);
@@ -13,7 +14,7 @@ const Recommendations = () => {
 
   const fetchRecommendations = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/recommendations');
+      const response = await axios.get(`${config.apiUrl}/recommendations`);
       setRecommendations(response.data.recommendations || []);
     } catch (error) {
       console.error('Failed to fetch recommendations:', error);
