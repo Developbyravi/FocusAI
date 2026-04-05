@@ -2,33 +2,25 @@
   "version": 2,
   "builds": [
     {
-      "src": "client/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build"
+        "distDir": "client/build"
       }
-    },
-    {
-      "src": "server/server-dev.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "ai-service/app-simple.py",
-      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "server/server-dev.js"
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
     },
     {
-      "src": "/ai/(.*)",
-      "dest": "ai-service/app-simple.py"
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|json|txt))",
+      "dest": "/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "client/$1"
+      "dest": "/index.html"
     }
   ]
 }

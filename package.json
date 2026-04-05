@@ -1,0 +1,20 @@
+{
+  "name": "focusai",
+  "version": "1.0.0",
+  "description": "FocusAI - Intelligent Content Filtering System",
+  "scripts": {
+    "build": "cd client && npm install && npm run build",
+    "start": "node server/server-dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Developbyravi/FocusAI.git"
+  },
+  "keywords": [
+    "ai",
+    "content-filtering",
+    "productivity"
+  ],
+  "author": "Developbyravi",
+  "license": "MIT"
+}
