@@ -72,19 +72,30 @@ This project is ready to deploy on:
 - **Backend**: Render (free tier available)
 - **Frontend**: Netlify (free tier available)
 
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete deployment instructions.
+### 📚 Deployment Guides
 
-### Quick Deploy Steps:
+Choose the guide that fits your needs:
 
-1. **Deploy Backend to Render**
-   - Push to GitHub
+| Guide | Best For | Time |
+|-------|----------|------|
+| [QUICK_DEPLOY.md](./QUICK_DEPLOY.md) | Quick reference, experienced users | 10 min |
+| [RENDER_GUIDE.md](./RENDER_GUIDE.md) | Detailed Render backend deployment | 15 min |
+| [NETLIFY_GUIDE.md](./NETLIFY_GUIDE.md) | Detailed Netlify frontend deployment | 15 min |
+| [DEPLOYMENT_FLOWCHART.md](./DEPLOYMENT_FLOWCHART.md) | Visual flowchart and overview | 5 min |
+| [DEPLOYMENT_CHECKLIST.md](./DEPLOYMENT_CHECKLIST.md) | Interactive step-by-step checklist | 30 min |
+| [DEPLOYMENT.md](./DEPLOYMENT.md) | Complete comprehensive guide | 30 min |
+
+### ⚡ Quick Deploy Steps:
+
+1. **Deploy Backend to Render** (5 min)
+   - Push to GitHub ✓ (Already done!)
    - Connect repo to Render
    - Add `GROK_API_KEY` environment variable
    - Deploy automatically via `render.yaml`
 
-2. **Deploy Frontend to Netlify**
+2. **Deploy Frontend to Netlify** (5 min)
    - Update `client/.env.production` with backend URL
    - Update `netlify.toml` with backend URL
-   - Deploy via Netlify CLI or dashboard
+   - Deploy via Netlify dashboard
 
-Full guide: [DEPLOYMENT.md](./DEPLOYMENT.md)
+**Start here**: [RENDER_GUIDE.md](./RENDER_GUIDE.md) → [NETLIFY_GUIDE.md](./NETLIFY_GUIDE.md)
