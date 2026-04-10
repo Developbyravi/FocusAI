@@ -5,7 +5,7 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://your-render-backend-url.onrender.com/api/:splat"
+  to = "https://focusai-2.onrender.com/api/:splat"
   status = 200
   force = true
 
