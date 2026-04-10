@@ -1,0 +1,14 @@
+{
+  "name": "focusai",
+  "version": "1.0.0",
+  "description": "AI-powered content filtering and learning optimization",
+  "scripts": {
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "dev": "echo 'Start server: cd server && npm run dev' && echo 'Start client: cd client && npm start'",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start"
+  },
+  "keywords": ["ai", "focus", "learning", "grok"],
+  "author": "",
+  "license": "MIT"
+}

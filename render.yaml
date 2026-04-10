@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: focusai-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: GROK_API_KEY
+        sync: false
+      - key: GROK_API_URL
+        value: https://api.x.ai/v1
+      - key: MONGODB_URI
+        sync: false
