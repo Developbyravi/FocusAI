@@ -1,6 +1,0 @@
-const config = {
-  apiUrl: process.env.REACT_APP_API_URL || 'http://localhost:5000/api',
-  aiServiceUrl: process.env.REACT_APP_AI_SERVICE_URL || 'http://localhost:5001/ai'
-};
-
-export default config;
